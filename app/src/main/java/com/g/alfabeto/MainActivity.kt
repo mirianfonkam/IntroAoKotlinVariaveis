@@ -12,22 +12,21 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-    }
-
-    fun nextAlpha(view: View) {
-        if (alpha < 'Z') {
-            alpha++     //proximo char
-        } else {
-            alpha = 'A' //auto restart
-        }
         letter = findViewById(R.id.letter)
+    }
+
+    fun nextAlphaLetter(view: View) {
+        if (alpha < 'Z') {
+            alpha++
+        } else {
+            alpha = 'A'
+        }
         letter.text = alpha.toString()
     }
 
 
-    fun restart(view: View) {
-        alpha = 'A'    //start
+    fun restartAlphaSequence(view: View) {
+        alpha = 'A'
         letter.text = alpha.toString()
     }
-
 }
